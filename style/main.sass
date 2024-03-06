@@ -1,0 +1,230 @@
+
+$clr-black: #1c1c1c
+$clr-gray: #ececec
+$clr-white: #f7f7f7
+
+$type-Normal: #A8A77A
+$type-Fire: #EE8130
+$type-Water: #6390F0
+$type-Electric: #F7D02C
+$type-Grass: #7AC74C
+$type-Ice: #96D9D6
+$type-Fighting: #C22E28
+$type-Poison: #A33EA1
+$type-Ground: #E2BF65
+$type-Flying: #A98FF3
+$type-Psychic: #F95587
+$type-Bug: #A6B91A
+$type-Rock: #B6A136
+$type-Ghost: #735797
+$type-Dragon: #6F35FC
+$type-Dark: #705746
+$type-Steel: #B7B7CE
+$type-Fairy: #D685AD
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Rubik', sans-serif
+
+
+
+ul 
+    list-style: none
+    margin: 0
+
+
+body
+    min-height: 100vh
+    background: $clr-gray
+
+    header
+        padding-block: 1rem
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .5)
+        background-color: $clr-white
+    .nav
+
+        display: flex
+        flex-flow: column wrap
+        gap: 1rem
+        align-items: flex-start
+        padding-inline: 2rem
+        max-width: 1000px
+        margin: 0 auto
+
+        img
+            width: 150px
+
+        button
+            border: none
+            border-radius: 0
+            padding: 0
+
+        .nav-list
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: .5rem
+
+        .btn-header
+            padding: .5rem
+            border-radius: 100vmax
+            cursor: pointer
+            text-transform: uppercase
+            font-weight: 600
+            box-shadow: 0 0 1rem rgba(0, 0, 0, .25)
+            transition: .2s
+
+            &:hover
+                transform: scale(1.1)
+                box-shadow: 0 0 2rem rgba(0, 0, 0, .25)
+
+
+    .normal
+        background-color: $type-Normal
+
+    .fire
+        background: $type-Fire
+    
+    .water
+        color: $clr-white
+        background: $type-Water
+
+    .grass
+        background: $type-Grass
+
+    .electric
+        background: $type-Electric
+
+    .ice
+        background: $type-Ice
+
+    .fighting
+        background: $type-Fighting
+        color: $clr-white
+
+    .poison
+        background: $type-Poison
+        color: $clr-white
+    
+    .ground
+        background: $type-Ground
+    
+    .flying 
+        background: $type-Flying
+
+    .psychic
+        background: $type-Psychic
+
+    .bug
+        background: $type-Bug
+
+    .rock
+        background: $type-Rock
+
+    .ghost
+        background: $type-Ghost
+        color: $clr-white
+
+    .dark
+        background: $type-Dark
+        color: $clr-white
+
+    .dragon
+        background: $type-Dragon
+        color: $clr-white
+
+    .steel
+        background: $type-Steel
+    
+    .fairy
+        background: $type-Fairy
+
+main
+    padding: 2rem
+    max-width: 1000px
+    margin: 0 auto
+
+    .pokemon
+        position: relative
+        border-radius: 1rem
+        background: $clr-white
+        box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25)
+        padding-block: 1rem
+        text-transform: uppercase
+        overflow: hidden
+        isolation: isolate
+
+        .pokemon-id-back
+            position: absolute
+            top: 1rem
+            left: 50%
+            transform: translateX(-50%)
+            font-size: 6rem
+            font-weight: 800
+            color: $clr-gray
+            z-index: -1
+
+    .pokemon-todos
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 1rem
+
+    @media screen and ( max-width:  470px)
+        .pokemon-todos
+           grid-template-columns: 1fr 1fr
+    
+
+    .pokemon-imagen
+        padding-inline: 1rem
+        display: flex
+        justify-content: center
+        
+
+    .pokemon-imagen img
+        width: 100%
+        max-width: 6rem
+
+    .pokemon-info
+        display: flex
+        flex-direction: column
+        gap: .5rem
+        padding-inline: 1rem
+        align-items: center
+        text-align: center
+
+    .nombre-container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        column-gap: .5rem
+
+    .pokemon-id
+        background: $clr-gray
+        padding: .25rem .5rem
+        border-radius: 100vmax
+        font-size: .75rem
+        font-weight: 500
+
+    .pokemon-nombre
+        font-size: 1.4rem
+
+    .pokemon-tipos
+        display: flex
+        gap: .5rem
+        font-size: .75rem
+        font-weight: 500
+        flex-wrap: wrap
+        justify-content: center
+
+        .tipo
+            padding: .25rem .5rem
+            border-radius: 100vmax
+
+    .pokemon-stats
+        display: flex
+        gap: 1rem
+        font-size: .85rem
+        border-radius: 100vmax
